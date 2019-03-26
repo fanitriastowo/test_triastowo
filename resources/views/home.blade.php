@@ -15,7 +15,7 @@
                     @endif
 
                     <p>Data Master</p>
-                    <a href="#" class="btn btn-success">Input</a>
+                    <a href="{{ route('input') }}" class="btn btn-success">Input</a>
 
                     <table class="table table-striped">
                         <thead>
@@ -35,7 +35,7 @@
                                 <td>{{ $armada->jenis_armada_id }}</td>
                                 <td><a href="#" class="btn btn-primary btn-xs">Edit</a></td>
                                 <td>
-                                    <form action="#" method="post">
+                                    <form action="{{ route('destroy', $armada->id) }}" method="post">
                                         @csrf   
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-xs">Delete</button>
