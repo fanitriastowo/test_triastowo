@@ -11,8 +11,8 @@ class JenisArmada extends Model
       'merk'
     ];
 
-    public function armadas()
+    public function Armadas()
     {
-      return $this->hasMany('App\Armada');
+      return $this->belongsTo('App\Armada');
     }
 }

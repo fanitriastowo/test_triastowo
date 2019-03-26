@@ -15,7 +15,7 @@
                     @endif
 
                     <p>Data Master</p>
-                    <a href="{{ route('input') }}" class="btn btn-success">Input</a>
+                    <a href="{{ route('home.create') }}" class="btn btn-success">Input</a>
 
                     <table class="table table-striped">
                         <thead>
@@ -23,6 +23,7 @@
                                 <th>No.</th>
                                 <th>Kode.</th>
                                 <th>Jenis.</th>
+                                <th>Merk.</th>
                                 <th colspan="2">Action</th>
                             </tr>
                         </thead>
@@ -32,10 +33,11 @@
                             <tr>
                                 <td><?php echo $no; ?></td>
                                 <td>{{ $armada->kode }}</td>
-                                <td>{{ $armada->jenis_armada_id }}</td>
-                                <td><a href="#" class="btn btn-primary btn-xs">Edit</a></td>
+                                <td>{{ $armada->nama }}</td>
+                                <td>{{ $armada->merk }}</td>
+                                <td><a href="{{ route('home.edit', $armada->id) }}" class="btn btn-primary btn-xs">Edit</a></td>
                                 <td>
-                                    <form action="{{ route('destroy', $armada->id) }}" method="post">
+                                    <form action="{{ route('home.destroy', $armada->id) }}" method="post">
                                         @csrf   
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-xs">Delete</button>

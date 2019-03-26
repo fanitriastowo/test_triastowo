@@ -25,11 +25,12 @@
     </div>
     @endif
 
-    <form method="post" action="{{route('home.store')}}">
+    <form method="post" action="{{route('home.update', $armada->id)}}">
       <div class="form-group">
+        @method('PATCH')
         @csrf
         <label for="name">Kode:</label>
-        <input type="text" class="form-control" name="kode"/>
+        <input type="text" class="form-control" name="kode" value="{{$armada->kode}}"/>
       </div>
       <div class="form-group">
         <label for="price">Jenis Armada</label>
