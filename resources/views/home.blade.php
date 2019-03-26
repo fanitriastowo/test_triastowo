@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    Data Master
+                    <p>Data Master</p>
+                    <a href="#" class="btn btn-success">Input</a>
 
                     <table class="table table-striped">
                         <thead>
