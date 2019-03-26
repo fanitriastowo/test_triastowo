@@ -9,4 +9,5 @@ class Armada extends Model
     protected $fillable = [
       'kode'
     ];
+
 }

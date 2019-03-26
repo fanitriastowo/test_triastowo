@@ -16,6 +16,8 @@ class CreateJenisArmadasTable extends Migration
         Schema::create('jenis_armadas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('nama');
+            $table->string('merk');
         });
     }
 

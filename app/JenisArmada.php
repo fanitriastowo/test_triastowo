@@ -10,4 +10,9 @@ class JenisArmada extends Model
       'nama',
       'merk'
     ];
+
+    public function armadas()
+    {
+      return $this->hasMany('App\Armada');
+    }
 }

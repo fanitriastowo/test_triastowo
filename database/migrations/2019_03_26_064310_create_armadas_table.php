@@ -16,6 +16,8 @@ class CreateArmadasTable extends Migration
         Schema::create('armadas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('kode');
+            $table->integer('jenis_armada_id');
         });
     }
 

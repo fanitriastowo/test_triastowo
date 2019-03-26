@@ -15,6 +15,36 @@
                     @endif
 
                     Data Master
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Kode.</th>
+                                <th>Jenis.</th>
+                                <th colspan="2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1; ?>
+                            <?php foreach ($armadas as $armada): ?>
+                            <tr>
+                                <td><?php echo $no; ?></td>
+                                <td>{{ $armada->kode }}</td>
+                                <td>{{ $armada->jenis_armada_id }}</td>
+                                <td><a href="#" class="btn btn-primary btn-xs">Edit</a></td>
+                                <td>
+                                    <form action="#" method="post">
+                                        @csrf   
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-xs">Delete</button>
+                                  </form>
+                                </td>
+                            </tr>
+                            <?php $no++; ?>
+                            <?php endforeach ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
